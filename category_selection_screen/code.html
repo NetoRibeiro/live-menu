@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Category Selection Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#141414",
+                "background-light": "#f7f7f7",
+                "background-dark": "#191919",
+                },
+                fontFamily: {
+                "display": ["Plus Jakarta Sans", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for cleaner UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display antialiased overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 px-4 py-3 flex items-center justify-between transition-colors duration-300">
+<!-- Left Placeholder / Back -->
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-primary dark:text-white transition-colors">
+<!-- Keeping it simple as per plan, though bottom nav has primary back button -->
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Title -->
+<h1 class="text-lg font-bold text-primary dark:text-white tracking-tight uppercase">Menu</h1>
+<!-- Table Info -->
+<div class="flex items-center gap-1 bg-white dark:bg-white/10 px-3 py-1.5 rounded-full border border-gray-100 dark:border-gray-700 shadow-sm">
+<span class="material-symbols-outlined text-sm text-primary dark:text-white">table_restaurant</span>
+<span class="text-xs font-bold text-primary dark:text-white">#04</span>
+</div>
+</header>
+<!-- Main Content Area: Vertical Category List -->
+<main class="flex-1 w-full max-w-md mx-auto p-4 pb-28 space-y-4">
+<!-- Header Message -->
+<div class="py-2">
+<h2 class="text-2xl font-extrabold text-primary dark:text-white leading-tight">What are you<br/>craving today?</h2>
+</div>
+<!-- Category: Breakfast -->
+<div class="group relative w-full aspect-[2/1] overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of eggs benedict with hollandaise sauce" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAx3IPFESnaJxE-FU0zZf675Ol-NSq-1SCLXuOUruc68UcqcY9fpXCIPS5ovmp5nPupBPFe_8nZSZ5oO5Yb-XLukPhuUqDZddsUp1Asdiifm-nx735adjT42xG8QHzNib-gOJOuT2O6opZF7K_y4XUdxMX2spuQAeTffX_UIJy9AagV5KJn5YjgrI-2xhWquGRCz-GKuFGEPe4qCnluXUbfJtD5ujpDtZlvozYTn-bWcC85sclcAwVCH5sM6z2spiCABX6YfP7gtAA');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full flex items-end justify-between">
+<div>
+<p class="text-white/80 text-xs font-bold tracking-widest mb-1 uppercase">7:00 AM - 11:00 AM</p>
+<h3 class="text-white text-3xl font-extrabold tracking-tight">Breakfast</h3>
+</div>
+<span class="material-symbols-outlined text-white bg-white/20 backdrop-blur-md p-2 rounded-full group-hover:bg-white group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Brunch -->
+<div class="group relative w-full aspect-[2/1] overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Avocado toast on wooden board with coffee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPoGrE8NG7GOtnQsDCdqYcagd4cZMFZKAtpkYQ1KrRC0VNQWXnUsdIy9o7bhwk7MQSC-y2KRp6jZZYK_ZglCH8aobzVYi85K0StSdF6geM0VLP4m_mBkNihig4T806JI5iF8XKMPf398zYS2zLssbqdiZDJvZ0HKrOUAXZbUeZF_tdcr2Sa6X1vfuE11jtxHYvpElkSSUjou9FG8BIGjA9jqL7xTZtPyijdQhwJcSWDQPDh0xoHkW8uKzvNjoxqXQHqVlPuVOzzu4');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full flex items-end justify-between">
+<div>
+<p class="text-white/80 text-xs font-bold tracking-widest mb-1 uppercase">11:00 AM - 2:00 PM</p>
+<h3 class="text-white text-3xl font-extrabold tracking-tight">Brunch</h3>
+</div>
+<span class="material-symbols-outlined text-white bg-white/20 backdrop-blur-md p-2 rounded-full group-hover:bg-white group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Lunch -->
+<div class="group relative w-full aspect-[2/1] overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Juicy burger with lettuce and cheese on plate" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANzM2fkWYXeT1ssCgDGD3M7YgfWejgOpPRxU-APezgyHsLgi24c4WwmHY6Xf6KT0VivwABdhrLYvFIPUoH6GlNM0wfzs9iOBbZI4vzpmisLunxRci-xFaakXYL7Yds9sTCzKke4DW10sSDkCnjdZtA8yBVr2clWw7-8GsGXRMmDNueJp-LLsJRYv1suxT1U3hQbYTYsQ2h3HRp8nwd8ARYlFgffTXX0zGCJkdNjz0l0ft5UT_klO8VROn7ES0avpLhQwHP_WzMgQk');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full flex items-end justify-between">
+<div>
+<p class="text-white/80 text-xs font-bold tracking-widest mb-1 uppercase">12:00 PM - 4:00 PM</p>
+<h3 class="text-white text-3xl font-extrabold tracking-tight">Lunch</h3>
+</div>
+<span class="material-symbols-outlined text-white bg-white/20 backdrop-blur-md p-2 rounded-full group-hover:bg-white group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Dinner -->
+<div class="group relative w-full aspect-[2/1] overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Grilled steak with rosemary and roasted vegetables" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByIAVTfiDI19lpcaD8xGHD10vElNBg28_jH1qGbr-u5B-dx5UM00Z53rV87Nr1w9cNNUbq8N1k0GIhp1gtUG5d9p-0u7FmbMTRPhw7QERsypnjerg0R_Ov6lHGEC_T82gonelRALaz7ZxszVNK5UamYr3MVkFadMegcm5zkxRl7DX_BlNGPEmMqPMfOzbvr0TnlslTT7ofmAv8jqpJP8oSVII4T0D-el32k2nRUFd_VwG6Jq8pgYuzEHPlvcLq2iupbFqEYYh2-_I');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full flex items-end justify-between">
+<div>
+<p class="text-white/80 text-xs font-bold tracking-widest mb-1 uppercase">5:00 PM - 10:00 PM</p>
+<h3 class="text-white text-3xl font-extrabold tracking-tight">Dinner</h3>
+</div>
+<span class="material-symbols-outlined text-white bg-white/20 backdrop-blur-md p-2 rounded-full group-hover:bg-white group-hover:text-primary transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Drinks -->
+<div class="group relative w-full aspect-[2/1] overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Colorful cocktails with garnish on bar counter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlTC3g5O8s-Nj2UA9cnefUEx6qrRyWPO13UoFw5WccDg19tBWNFLq4URYkGebEsbxk0fDi8updYhizX4mtiVYwJ26mD9OKlRa91cEQEyPoCXQbje7zabQIsdqlOSAtrv3RAPUE-Fut8hHbCwxjxoAhAKPRRNP5xFXstLV8XcaiJbhTSq_dNHY0iI2vCFB7wz26tidgQMh9KmQ__U-hfABD4paPOopkz6BP0IBpQhRA90cNVBpeUotIxIXI7pYVGLdxzT1ac3L5fPc');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full flex items-end justify-between">
+<div>
+<p class="text-white/80 text-xs font-bold tracking-widest mb-1 uppercase">All Day</p>
+<h3 class="text-white text-3xl font-extrabold tracking-tight">Drinks</h3>
+</div>
+<span class="material-symbols-outlined text-white bg-white/20 backdrop-blur-md p-2 rounded-full group-hover:bg-white group-hover:text-primary transition-colors">local_bar</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-30 bg-white/80 dark:bg-[#191919]/90 backdrop-blur-xl border-t border-gray-200 dark:border-gray-800 pb-safe pt-2">
+<div class="flex items-center justify-between gap-4 px-6 py-3 max-w-md mx-auto">
+<!-- Back Button -->
+<button class="flex-1 flex flex-col items-center justify-center gap-1 group">
+<div class="h-10 w-full rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center text-primary dark:text-white bg-white dark:bg-white/5 active:bg-gray-50 dark:active:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="text-sm font-bold ml-2">Back</span>
+</div>
+</button>
+<!-- Home Button -->
+<button class="flex-1 flex flex-col items-center justify-center gap-1 group">
+<div class="h-10 w-full rounded-xl bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px] icon-filled">home</span>
+<span class="text-sm font-bold ml-2">Home</span>
+</div>
+</button>
+</div>
+<!-- Safe Area Spacer for iOS Home Bar -->
+<div class="h-5 w-full"></div>
+</nav>
+</body></html>

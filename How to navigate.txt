@@ -1,0 +1,8 @@
+App Launch / Home: The user starts here (implied, we can design this if you like!).
+Category Selection Screen: From the Home/Start, the user lands on this screen, where they choose a main category (e.g., "Dinner").
+Sub-Category Selection Screen: After selecting "Dinner," the app transitions quickly to this screen, showing sub-categories like "Appetizers," "Main," "Dessert."
+Product List Screen: The user selects "Main" and is taken to the product list, displaying individual dishes with their details and video placeholders.
+Navigation:
+From any screen, the "Home" button instantly takes the user back to the Category Selection Screen.
+The "Back" button allows the user to return to the previous screen (e.g., from Product List to Sub-Category, or Sub-Category to Category).
+This flow ensures the user always knows where they are within the three-level hierarchy.

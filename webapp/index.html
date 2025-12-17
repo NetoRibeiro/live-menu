@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Live Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Persistent Navigation (Top) -->
+        <header class="global-header">
+            <button id="home-btn" class="nav-btn icon-btn" aria-label="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </button>
+            <div id="page-title" class="page-title">Menu</div>
+            <button id="back-btn" class="nav-btn icon-btn hidden" aria-label="Back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Screen 1: Categories -->
+            <section id="category-screen" class="screen active">
+                <div class="grid-container" id="category-list">
+                    <!-- Categories injected here -->
+                </div>
+            </section>
+
+            <!-- Screen 2: Sub-Categories -->
+            <section id="subcategory-screen" class="screen">
+                <h2 id="selected-category-title" class="screen-title"></h2>
+                <div class="grid-container" id="subcategory-list">
+                    <!-- Sub-categories injected here -->
+                </div>
+            </section>
+
+            <!-- Screen 3: Products -->
+            <section id="product-screen" class="screen">
+                <h2 id="selected-subcategory-title" class="screen-title"></h2>
+                <div class="list-container" id="product-list">
+                    <!-- Products injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

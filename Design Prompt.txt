@@ -1,0 +1,56 @@
+Design Prompt:
+Design Brief: Visual-First Restaurant Menu App
+
+Project Overview Create a high-fidelity UI design for a mobile-only digital menu application. The app is strictly for browsing—no ordering or checkout. The focus is on speed, fluid transitions, and immersive video content.
+
+Navigation & Architecture
+The app must follow a strict three-level hierarchy to ensure the user never feels lost:
+
+Level 1 (Categories): Breakfast, Brunch, Lunch, Dinner, Drinks.
+
+Level 2 (Sub-Categories): Appertarts, Starter, Main, Sober, Dessert, Drinks.
+
+Level 3 (Products): The final list of items.
+
+Logic:
+
+Selecting a Category hides everything else and reveals only its Sub-Categories.
+
+Selecting a Sub-Category reveals the Product List.
+
+Global Controls: A persistent "Home/Start" button and a "Back" button must be accessible at all times for rapid navigation.
+
+Product Card Requirements
+Each product must be presented with high visual impact. The layout should include:
+
+Name & Price: Clear, legible typography.
+
+Description: Short, punchy text.
+
+Static Image: A high-quality placeholder.
+
+"Live Image" (Video): A TikTok-style vertical video loop that triggers on hover or scroll to show the dish being prepared or served.
+
+Visual Style & Tech Specs
+Theming: The UI must be "Themeable." Do not hardcode colors. Design the interface using a system that can be controlled via a YAML configuration file (e.g., primary_color, bg_color, accent_color).
+
+Performance Look: Transitions between pages should feel instantaneous (minimalist animations, skeleton loaders).
+
+Format: Mobile-responsive portrait view (iOS/Android).
+
+Deliverables Requested
+User Flow Map: Showing the path from Start to Product.
+
+UI Mockups: High-fidelity screens for each of the three levels.
+
+Prototype: A clickable flow showing the "Live Image" integration and the speed of category switching.
+
+Pro-Tip for your Designer:
+
+Ask them to focus on "Micro-interactions." Because this is a "busy" restaurant, the menu needs to feel "snappy." If the video takes too long to load, it will frustrate users. Suggest they design a "low-res-to-high-res" transition for the video elements.
+
+
+Plan:
+Category Selection Screen: This screen presents large, inviting cards for each main category (Breakfast, Brunch, Lunch, Dinner, Drinks), with a clear "Home" button at the top and a global navigation bar at the bottom for easy access.
+Sub-Category Selection Screen: After selecting a category, this screen shows an array of sub-categories (e.g., Appetizers, Main Courses, Desserts) in a clean, grid-like layout, maintaining the global navigation and a "Back" button for fluid movement.
+Product List Screen: This screen features a scrolling list of individual product cards. Each card highlights the dish's name and price, a concise description, a high-quality static image, and a prominent area indicating where the "Live Image" video will play, with a subtle loading indicator to suggest the "low-res-to-high-res" transition.

@@ -1,0 +1,18 @@
+{
+    "theme": {
+        "colors": {
+            "primary": "#ff4d4d",
+            "background": "#121212",
+            "surface": "#1e1e1e",
+            "text_primary": "#ffffff",
+            "text_secondary": "#a0a0a0",
+            "accent": "#ffcc00"
+        },
+        "fonts": {
+            "heading": "'Outfit', sans-serif",
+            "body": "'Inter', sans-serif"
+        },
+        "borderRadius": "16px",
+        "animationSpeed": "0.4s"
+    }
+}

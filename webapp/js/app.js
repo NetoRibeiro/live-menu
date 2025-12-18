@@ -210,6 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'product-card';
 
+            // Generate star rating HTML
+            const stars = generateStarRating(prod.averageRating || 0);
+
+            // Format review count
+            const reviewText = formatReviewCount(prod.reviewCount || 0);
+
             // Video Logic: Only autoplay if observer sees it
             card.innerHTML = `
                 <div class="media-container loading-placeholder">
@@ -221,6 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="product-name">${prod.name}</div>
                         <div class="product-price">${prod.price}</div>
                     </div>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <span class="stars">${stars}</span>
+                            <span class="rating-value">${prod.averageRating || 0}</span>
+                            <span class="review-count">${reviewText}</span>
+                        </div>
+                        <div class="price-range">${prod.priceRange || '$'}</div>
+                    </div>
                     <div class="product-desc">${prod.description}</div>
                 </div>
             `;
@@ -230,6 +244,43 @@ document.addEventListener('DOMContentLoaded', () => {
             observeVideo(card.querySelector('.media-container'));
         });
     }
+
+    // Helper function to generate star rating HTML
+    function generateStarRating(rating) {
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 >= 0.5;
+        const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+        let stars = '';
+        // Full stars
+        for (let i = 0; i < fullStars; i++) {
+            stars += '★';
+        }
+        // Half star
+        if (hasHalfStar) {
+            stars += '⯨';
+        }
+        // Empty stars
+        for (let i = 0; i < emptyStars; i++) {
+            stars += '☆';
+        }
+
+        return stars;
+    }
+
+    // Helper function to format review count
+    function formatReviewCount(count) {
+        if (count === 0) {
+            return 'No reviews';
+        } else if (count === 1) {
+            return '(1 review)';
+        } else if (count >= 1000) {
+            return `(${(count / 1000).toFixed(1)}k reviews)`;
+        } else {
+            return `(${count} reviews)`;
+        }
+    }
+
 
     // --- Video Observation ---
     const observerOptions = {

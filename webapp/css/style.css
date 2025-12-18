@@ -236,6 +236,48 @@ body {
     color: var(--text-secondary);
 }
 
+/* Product Review Metadata */
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.rating-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.review-count {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.price-range {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
 /* Utility */
 .loading-placeholder {
     background: linear-gradient(90deg, var(--surface) 25%, #2a2a2a 50%, var(--surface) 75%);

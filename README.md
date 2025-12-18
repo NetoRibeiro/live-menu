@@ -32,43 +32,51 @@ A modern, visual-first digital menu application designed for restaurants. Browse
 
 **Using Python:**
 ```bash
-cd webapp
+cd c:\Antigravity\live-menu
 python -m http.server 8000
 ```
 
 **Using Node.js:**
 ```bash
-cd webapp
+cd c:\Antigravity\live-menu
 npx http-server -p 8000
 ```
 
 **Using VS Code:**
 - Install "Live Server" extension
-- Right-click `webapp/index.html` → "Open with Live Server"
+- Right-click `index.html` → "Open with Live Server"
 
 Then visit: `http://localhost:8000`
 
 ### Option 2: GitHub Pages
 
-1. Fork or clone this repository
+1. Push your code to GitHub
 2. Go to Settings → Pages
-3. Set source to `main` branch, `/webapp` folder
+3. Set source to `main` branch, `/ (root)` folder
 4. Access at: `https://YOUR_USERNAME.github.io/live-menu/`
+
+See [GITHUB_PAGES_DEPLOYMENT.md](GITHUB_PAGES_DEPLOYMENT.md) for detailed instructions.
 
 ## 📁 Project Structure
 
 ```
 live-menu/
-├── webapp/
-│   ├── index.html          # Main application
-│   ├── css/
-│   │   └── style.css       # Styles with CSS variables
-│   ├── js/
-│   │   └── app.js          # Application logic
-│   └── assets/             # Static assets
+├── index.html          # Main application
+├── css/
+│   └── style.css       # Styles with CSS variables
+├── js/
+│   └── app.js          # Application logic
+├── assets/             # Static assets
+│   ├── images/
+│   │   ├── categories/
+│   │   ├── subcategories/
+│   │   └── products/
+│   ├── videos/
+│   ├── IMAGE_GUIDE.md
+│   └── README.md
 ├── data/
-│   ├── menu.json           # Menu data (categories, products)
-│   └── theme.json          # Theme configuration
+│   ├── menu.json       # Menu data (categories, products)
+│   └── theme.json      # Theme configuration
 ├── category_selection_screen/
 ├── sub-category_selection_screen/
 ├── product_list_screen/
